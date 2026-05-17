@@ -14,8 +14,8 @@ python analyze_logs.py
 ## Docker (port 8080)
 
 ```bash
-docker build -t your-dockerhub-user/mysql-log-analyzer .
-docker run --rm -p 8080:8080 your-dockerhub-user/mysql-log-analyzer
+docker build -t <image_name> .
+docker run --rm -p 8080:8080 <image_name>
 # Open http://localhost:8080
 ```
 
@@ -23,6 +23,12 @@ Or with compose:
 
 ```bash
 docker compose up --build
+```
+
+Or You can directly pull from DockerHub:
+```bash
+docker pull mmiddha/log-analytics
+docker run --rm -p 8080:8080 mmiddha/log-analytics
 ```
 
 ## CLI
